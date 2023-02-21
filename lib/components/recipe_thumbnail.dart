@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../models/simple_recipe.dart';
+
 class RecipeThubmnail extends StatelessWidget {
-  const RecipeThubmnail({super.key});
+  const RecipeThubmnail({super.key, required this.recipe});
+
+  final SimpleRecipe recipe;
 
   @override
   Widget build(BuildContext context) {
@@ -12,15 +16,16 @@ class RecipeThubmnail extends StatelessWidget {
           child: ClipRRect(
               borderRadius: BorderRadius.circular(16),
               child: Image.asset(
-                'assets/food_pics/food_banana.jpg',
+                recipe.dishImage,
                 fit: BoxFit.cover,
               )),
         ),
         const SizedBox(
           height: 8,
         ),
-        Text('Smoke salmon', style: Theme.of(context).textTheme.bodyText1),
-        Text('39 mins', style: Theme.of(context).textTheme.bodyText1),
+        Text(recipe.title, style: Theme.of(context).textTheme.bodyText1),
+        Text('${recipe.duration} mins',
+            style: Theme.of(context).textTheme.bodyText1),
       ],
     );
   }
