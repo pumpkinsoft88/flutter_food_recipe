@@ -14,11 +14,11 @@ class RecipesScreen extends StatelessWidget {
     return FutureBuilder<Object>(
         future: mockFooderlichService.getRecipes(),
         builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.done) {
-            return const Center(child: Text('Recipe screen'));
-          } else {
-            return const Center(child: CircularProgressIndicator());
-          }
+          // if (snapshot.connectionState == ConnectionState.done) {
+          return const RecipesGridView();
+          // } else {
+          // return const Center(child: CircularProgressIndicator());
+          // }
         });
   }
 }
