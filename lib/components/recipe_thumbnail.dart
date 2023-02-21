@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../models/simple_recipe.dart';
 
-class RecipeThubmnail extends StatelessWidget {
-  const RecipeThubmnail({super.key, required this.recipe});
+class RecipeThumbnail extends StatelessWidget {
+  const RecipeThumbnail({super.key, required this.recipe});
 
   final SimpleRecipe recipe;
 

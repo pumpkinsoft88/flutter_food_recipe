@@ -20,10 +20,11 @@ class RecipesGridView extends StatelessWidget {
         crossAxisSpacing: _gridPadding,
       ),
       itemBuilder: (BuildContext context, int index) {
-        return RecipeThubmnail(
+        return RecipeThumbnail(
           recipe: recipes[index],
         );
       },
+      itemCount: recipes.length,
     );
   }
 }
